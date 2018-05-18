@@ -5,9 +5,7 @@ export const getPokemons = (offset = null) =>
         pokeapi.get(offset)
             .then(pokemons => dispatch({
                 type: 'LIST_POKEMONS',
-                payload: {
-                    pokemons: pokemons.results
-                }
+                payload: pokemons.results
             }))
             .catch((error) => console.log(error));
     };

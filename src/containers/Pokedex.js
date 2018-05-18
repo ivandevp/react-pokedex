@@ -58,9 +58,11 @@ class Pokedex extends Component {
 }
 
 
-const mapStateToProps = (state) => ({
-    pokemons: state.pokemons,
-});
+const mapStateToProps = (state) => {
+    console.log(state);
+    return {
+    pokemons: state.pokedex.pokemons,
+}};
 
 const mapDispatchToProps = (dispatch) => ({
     getPokemons: (offset) => dispatch(actions.getPokemons(offset)),
